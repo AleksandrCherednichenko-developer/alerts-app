@@ -1,5 +1,5 @@
 <template>
-    <div class="card__item" :style="{ backgroundImage: `url(${image})` }">
+    <div class="card__item" :style="{ backgroundImage: image ? `url(${image})` : null }">
         <div v-if="props.text" class="card__item-text">
             <p v-for="(item, index) in props.text" :key="index" class="uppercase-text">
                 {{ item }}
@@ -24,7 +24,10 @@ const props = defineProps({
     text: { type: Object, default: () => ({}) },
 });
 
-const image = computed(() => { return `public/${props.path}/${props.icon}.${props.format}`; });
+const image = computed(() => {
+    if (!props.icon) return null;
+    return `/public/${props.path}/${props.icon}.${props.format}`;
+});
 </script>
 
 <style src="./styles.scss" lang="scss" scoped />
