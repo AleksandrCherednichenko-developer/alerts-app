@@ -1,0 +1,36 @@
+.post__item {
+    @include transit('box-shadow');
+    display: flex;
+    flex-direction: column;
+    gap: calc-rem(30px);
+    min-width: calc-rem(310px);
+    min-height: calc-rem(220px);
+    font-weight: $fwBlack;
+    font-size: calc-rem(24px);
+    background: linear-gradient(315deg, rgba(51, 123, 190, 0.20) 0%, rgba(51, 123, 190, 0.00) 100%), rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: calc-rem(16px);
+    cursor: pointer;
+
+    @include hover() {
+        box-shadow: 0 0 5px 5px rgba($cBlue, 0.4);
+    }
+
+    &-info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: calc-rem(16px);
+
+        p {
+            font-size: calc-rem(24px);
+        }
+    }
+
+    &-title {
+    }
+
+    &-text {
+        @include line-clamp(2)
+    }
+}

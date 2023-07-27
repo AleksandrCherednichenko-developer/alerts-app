@@ -1,0 +1,68 @@
+:root {
+    --rem: #{$baseRem};
+
+    --hHeader: #{$hHeader};
+
+    --pContent: #{$pContent};
+
+    // Head title
+    --fs-h1: #{$fz-h1};
+    --fs-h2: #{$fz-h2};
+    --fs-h3: #{$fz-h3};
+    --fs-h4: #{$fz-h4};
+    --fs-h5: #{$fz-h5};
+    --fs-h6: #{$fz-h6};
+
+    // Breakpoints
+    --bXl: #{$bXl};
+    --bLg: #{$bLg};
+    --bMd: #{$bMd};
+    --bSm: #{$bSm};
+    --bXs: #{$bXs};
+
+    --bHXl: #{$bHXl};
+    --bHLg: #{$bHLg};
+    --bHMd: #{$bHMd};
+    --bHSm: #{$bHSm};
+    --bHXs: #{$bHXs};
+
+
+    @media #{$mXl} {
+        --rem: 8px;
+
+        --hHeader: 100px;
+
+        --fs-h1: 38px;
+        --fs-h2: 30px;
+        --fs-h3: 24px;
+        --fs-h4: 22px;
+        --fs-h5: 20px;
+        --fs-h6: 16px;
+    }
+
+    @media #{$mMd} {
+        //--rem: 12px;
+
+        --fs-h1: 28px;
+        --fs-h2: 24px;
+        --fs-h3: 20px;
+        --fs-h4: 18px;
+        --fs-h5: 16px;
+        --fs-h6: 14px;
+    }
+
+    @media #{$mSm} {
+        //--rem: 10px;
+
+        --fs-h1: 24px;
+        --fs-h2: 20px;
+        --fs-h3: 18px;
+        --fs-h4: 16px;
+        --fs-h5: 14px;
+        --fs-h6: 12px;
+    }
+
+    @media #{$mXs} {
+        //--rem: 8px;
+    }
+}

@@ -1,0 +1,28 @@
+.row-shadow {
+    @include size(1080px);
+    position: absolute;
+    z-index: -1;
+    border-radius: 50%;
+    background: $cBlue;
+    filter: blur(480px);
+
+    @media #{$mXl} {
+
+    }
+    @media #{$mLg} {
+        @include size(800px);
+
+    }
+    @media #{$mMd} {
+        @include size(500px);
+
+    }
+    @media #{$mSm} {
+        @include size(350px);
+
+    }
+    @media #{$mXs} {
+        @include size(200px);
+
+    }
+}

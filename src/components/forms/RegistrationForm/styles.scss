@@ -1,0 +1,11 @@
+.form-registration{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    align-items: center;
+    gap: calc-rem(40px);
+
+    .base__input-wrapper{
+        width: 100%;
+    }
+}

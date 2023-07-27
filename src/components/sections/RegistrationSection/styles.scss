@@ -1,0 +1,27 @@
+@supports (height: 100dvh) {
+    .registration-section {
+        height: 100dvh;
+    }
+}
+
+.registration-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+    .text-title {
+        text-align: center;
+        font-size: calc-rem(108px);
+        font-weight: $fwBlack;
+        line-height: calc-rem(120px);
+        max-width: calc-rem(680px);
+        margin-bottom: calc-rem(68px);
+    }
+
+    .form-registration {
+        width: calc-rem(512px);
+        margin: 0 auto;
+    }
+}

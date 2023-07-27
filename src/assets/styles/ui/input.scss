@@ -1,0 +1,49 @@
+.base__input {
+    @include transit('box-shadow');
+    font-weight: $fwBold;
+    width: 100%;
+    color: inherit;
+    background: linear-gradient(315deg, rgba(51, 123, 190, 0.20) 0%, rgba(51, 123, 190, 0.00) 100%), rgba(255, 255, 255, 0.08);
+    border: none;
+    border-radius: 16px;
+    padding: calc-rem(24px);
+
+    &::placeholder {
+        color: rgba(255, 255, 255, 0.48);
+    }
+
+    &:hover,
+    &:focus,
+    &:focus-visible {
+        outline: none;
+        box-shadow: 0 0 5px 3px rgba($cBlue, 0.4);
+    }
+
+    &-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: calc-rem(14px);
+        max-width: calc-rem(510px);
+        min-height: calc-rem(64px);
+    }
+
+    &-inner {
+        position: relative;
+        width: 100%;
+
+        .input-password {
+            padding-right: calc-rem(84px);
+
+            &__toggle {
+                position: absolute;
+                top: 50%;
+                right: calc-rem(24px);
+                transform: translateY(-50%);
+            }
+        }
+    }
+
+    &-label {
+
+    }
+}

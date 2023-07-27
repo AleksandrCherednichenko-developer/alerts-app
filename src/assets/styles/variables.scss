@@ -1,0 +1,61 @@
+// Fonts
+$fnInter: 'Inter';
+$fInter: $fnInter, sans-serif;
+
+$fwRegular: 400;
+$fwBold: 700;
+$fwBlack: 900;
+
+$baseRem: 16px;
+
+$hHeader: 100px;
+
+$mwContent: 1850px;
+$pContent: 25px;
+
+$cWhite: #ffffff;
+$cDark: #00050B;
+$cBlue: #0A72D4;
+$cPurpleHeart: #712bd0;
+$cShamrock: #33d69b;
+$cOutrageousOrange: #ff6632;
+$cRedOrange: #ff323e;
+
+// Font-size titles
+$fz-h1: 40px;
+$fz-h2: 32px;
+$fz-h3: 26px;
+$fz-h4: 24px;
+$fz-h5: 22px;
+$fz-h6: 18px;
+
+
+$bXl: 1400px;
+$bLg: 1200px;
+$bMd: 992px;
+$bSm: 768px;
+$bXs: 576px;
+
+$mXl: '(max-width: #{$bXl - 1})';
+$mLg: '(max-width: #{$bLg - 1})';
+$mMd: '(max-width: #{$bMd - 1})';
+$mSm: '(max-width: #{$bSm - 1})';
+$mXs: '(max-width: #{$bXs - 1})';
+
+$mMoreXl: '(min-width: #{$bXl})';
+$mMoreLg: '(min-width: #{$bLg})';
+$mMoreMd: '(min-width: #{$bMd})';
+$mMoreSm: '(min-width: #{$bSm})';
+$mMoreXs: '(min-width: #{$bXs})';
+
+$bHXl: 1025px;
+$bHLg: 901px;
+$bHMd: 801px;
+$bHSm: 769px;
+$bHXs: 577px;
+
+$mHXl: '(max-height: #{$bHXl - 1})';
+$mHLg: '(max-height: #{$bHLg - 1})';
+$mHMd: '(max-height: #{$bHMd - 1})';
+$mHSm: '(max-height: #{$bHSm - 1})';
+$mHXs: '(max-height: #{$bHXs - 1})';

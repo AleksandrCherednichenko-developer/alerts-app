@@ -1,0 +1,14 @@
+.button-submit {
+    @include clear-button;
+    @include transit('box-shadow opacity');
+    background-color: $cBlue;
+    font-size: calc-rem(32px);
+    font-weight: $fwBlack;
+    width: calc-rem(224px);
+    height: calc-rem(224px);
+    border-radius: 50%;
+
+    @include hover() {
+        box-shadow: 0 0 10px 10px rgba($cBlue, 0.4), 0 0 7px 7px rgba($cBlue, 0.4), 0 0 5px 5px rgba($cBlue, 0.4);
+    }
+}

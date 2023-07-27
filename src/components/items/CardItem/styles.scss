@@ -1,0 +1,24 @@
+.card__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-width: calc-rem(300px);
+    min-height: calc-rem(200px);
+    border-radius: 16px;
+    background: linear-gradient(315deg, rgba(51, 123, 190, 0.20) 0%, rgba(51, 123, 190, 0.00) 100%), rgba(255, 255, 255, 0.08);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 45%;
+
+    &-text{
+        font-size: calc-rem(32px);
+        font-weight: $fwBlack;
+        line-height: calc-rem(40px);
+
+        p:nth-child(2) {
+            font-size: calc-rem(108px);
+            line-height: calc-rem(108px);
+        }
+    }
+}

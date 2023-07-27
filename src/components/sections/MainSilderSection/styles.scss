@@ -1,0 +1,36 @@
+.main-promo__section {
+    .slider {
+        position: relative;
+        width: 70%;
+        max-height: 500px;
+
+        &__item {
+            text-align: center;
+            font-size: 18px;
+            height: calc((100% - 30px) / 2) !important;
+
+            /* Center slide text vertically */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &__pagination {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: calc-rem(8px);
+            margin-top: calc-rem(24px);
+
+            :deep(.slider__pagination-item) {
+                @include size(12px);
+                background-color: rgba(255, 255, 255, 0.16);
+                border-radius: 50%;
+            }
+
+            :deep(.slider__pagination-item--active) {
+                background-color: $cBlue;
+            }
+        }
+    }
+}

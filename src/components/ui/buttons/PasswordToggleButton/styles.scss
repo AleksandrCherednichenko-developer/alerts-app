@@ -1,0 +1,15 @@
+.toggle__password-button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+
+    .icon {
+        @include size(25px);
+        min-width: 25px;
+        min-height: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+}

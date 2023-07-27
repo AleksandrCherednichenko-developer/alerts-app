@@ -1,0 +1,91 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+html {
+    font-size: var(--rem);
+}
+
+a {
+    font-family: inherit;
+    color: inherit;
+    text-decoration: none;
+}
+
+body {
+    min-width: 320px;
+    font-family: $fnInter;
+    font-weight: $fwRegular;
+    background-color: $cDark;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    color: $cWhite;
+    font-feature-settings: 'lnum' 1;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: transparent;
+    cursor: default;
+    overflow-y: scroll;
+    margin: 0;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 10em white inset !important;
+    -webkit-text-fill-color: yellow !important;
+    -webkit-animation: autofill 0s forwards;
+}
+
+@-webkit-keyframes autofill {
+    100% {
+        background: transparent;
+        color: inherit;
+    }
+}
+
+@supports (min-height: 100dvh) {
+    #app {
+        min-height: 100dvh;
+    }
+}
+
+#app {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container-content {
+    width: 100%;
+    max-width: calc($mwContent + var(--pContent) * 2);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--pContent);
+    padding-right: var(--pContent);
+}
+
+.section-content {
+    position: relative;
+    padding-top: var(--pContent);
+    padding-bottom: var(--pContent);
+}
+
+.text-ellipsis {
+    text-overflow: ellipsis; /* Добавляем многоточие */
+    white-space: nowrap; /* Запрещаем перенос строк */
+    overflow: hidden; /* Обрезаем все, что не помещается в область */
+}
+
+

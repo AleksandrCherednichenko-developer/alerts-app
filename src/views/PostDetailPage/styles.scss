@@ -1,0 +1,31 @@
+.post__page{
+    display: flex;
+    flex-direction: column;
+    gap: calc-rem(24px);
+    font-size: calc-rem(24px);
+    font-weight: $fwBlack;
+    background: linear-gradient(315deg, rgba(51, 123, 190, 0.20) 0%, rgba(51, 123, 190, 0.00) 100%), rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: calc-rem(32px);
+
+    &-info{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: calc-rem(20px);
+    }
+
+    &-input{
+        max-width: 100%;
+    }
+
+    &-buttons{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: calc-rem(20px);
+        .button{
+            min-width: calc-rem(200px);
+        }
+    }
+}
