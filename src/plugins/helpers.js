@@ -1,6 +1,3 @@
-import hash from 'string-hash';
-import randomSeed from 'random-seed';
-
 export const getQueryParams = (data = {}) => {
     const urlSearchParams = new URLSearchParams();
 

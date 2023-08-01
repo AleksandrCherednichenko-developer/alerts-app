@@ -1,5 +1,5 @@
 <template>
-    <section class="main-title__section section-content">
+    <section class="main-title__section section-content" :class="cssModifier">
         <UIRowShadow
             v-if="hasShadow"
             :top="shadowTop"
@@ -31,6 +31,7 @@ const props = defineProps({
     shadowBottom: { type: [String], default: 'auto' },
     shadowLeft: { type: [String], default: 'auto' },
     shadowRight: { type: [String], default: 'auto' },
+    cssModifier: { type: String, default: '' },
 });
 </script>
 
