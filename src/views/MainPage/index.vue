@@ -4,6 +4,7 @@
         has-shadow
         shadow-top="-70%"
         shadow-left="-10%"
+        css-modifier="has-ticker"
     />
     <MainSliderSection />
     <MainTitleSection

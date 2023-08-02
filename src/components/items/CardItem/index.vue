@@ -1,5 +1,5 @@
 <template>
-    <div class="card__item" :style="{ backgroundImage: `url(${image})` }">
+    <div class="card__item" :style="{ backgroundImage: image ? `url(${dynamicImages(image)})` : null }">
         <div v-if="props.text" class="card__item-text">
             <p v-for="(item, index) in props.text" :key="index" class="uppercase-text">
                 {{ item }}
@@ -16,6 +16,7 @@ export default {
 
 <script setup>
 import { computed } from 'vue';
+import dynamicImages from '@/composables/dynamic-images';
 
 const props = defineProps({
     icon: { type: String, default: '' },
@@ -24,7 +25,10 @@ const props = defineProps({
     text: { type: Object, default: () => ({}) },
 });
 
-const image = computed(() => { return `public/${props.path}/${props.icon}.${props.format}`; });
+const image = computed(() => {
+    if (!props.icon) return null;
+    return `/public/${props.path}/${props.icon}.png`;
+});
 </script>
 
 <style src="./styles.scss" lang="scss" scoped />

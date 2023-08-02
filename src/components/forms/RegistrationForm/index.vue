@@ -2,12 +2,14 @@
     <form class="form-registration" @submit.prevent="submitData">
         <BaseInput
             v-model="data.username"
+            class="form-registration__input"
             label-text="Username:"
             placeholder="Type your username"
         />
         <PasswordInput
             v-model="data.password"
             label-text="Password:"
+            class="form-registration__input"
             placeholder="Type your password"
         />
         <SubmitButton :disabled="loading" />

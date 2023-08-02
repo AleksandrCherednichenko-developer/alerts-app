@@ -1,6 +1,10 @@
 @supports (height: 100dvh) and (width: 100dvw) {
     .main-title__section {
-        min-height: calc(100dvh - var(--hHeader));
+        min-height: 100dvh;
+
+        &.has-ticker {
+            min-height: calc(100dvh - var(--hHeader));
+        }
     }
 }
 
@@ -9,7 +13,11 @@
     align-items: center;
     justify-content: center;
     min-width: 100%;
-    min-height: calc(100vh - var(--hHeader));
+    min-height: 100vh;
+
+    &.has-ticker {
+        min-height: calc(100vh - var(--hHeader));
+    }
 }
 
 .text-title {

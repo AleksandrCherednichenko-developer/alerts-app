@@ -2,4 +2,10 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: calc-rem(20px);
+
+    &-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: calc-rem(20px);
+    }
 }

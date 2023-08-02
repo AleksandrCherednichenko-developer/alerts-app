@@ -5,7 +5,7 @@
     align-items: center;
     gap: calc-rem(40px);
 
-    .base__input-wrapper{
+    &__input{
         width: 100%;
     }
 }
