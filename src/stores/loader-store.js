@@ -15,14 +15,14 @@ export const useLoaderStore = defineStore('loader', () => {
         loading.value = false;
     };
 
-    const respProcessing = async resp => {
-        if (!resp) await router.push({ name: ROUTE_NAMES.MAIN_PAGE.routeName });
+    const redirectInMain = () => {
+        router.push({ name: ROUTE_NAMES.MAIN_PAGE.routeName });
     };
 
     return {
         loading,
         startLoad,
         stopLoad,
-        respProcessing,
+        redirectInMain,
     };
 });
