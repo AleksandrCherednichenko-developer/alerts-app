@@ -11,10 +11,9 @@ export const usePostsStore = defineStore('posts', () => {
     const loaderStore = useLoaderStore();
 
     async function getPostsList (offset, limit, search) {
-        if (postsList.value.length) return;
         loaderStore.startLoad();
         const resp = await PostsService.getPostsList(offset, limit, search);
-        await loaderStore.respProcessing(resp);
+        if (!resp) loaderStore.redirectInMain();
         postsList.value = resp.map(el => {
             return {
                 ...el,
@@ -30,7 +29,7 @@ export const usePostsStore = defineStore('posts', () => {
         if (postInfo.value.id === id) return;
         loaderStore.startLoad();
         const resp = await PostsService.getPostById(id);
-        await loaderStore.respProcessing(resp);
+        if (!resp) loaderStore.redirectInMain();
         postInfo.value = resp;
         loaderStore.stopLoad();
     }
@@ -38,7 +37,7 @@ export const usePostsStore = defineStore('posts', () => {
     async function changePostInfo (id, body) {
         loaderStore.startLoad();
         const resp = await PostsService.changePostInfo(id, body);
-        await loaderStore.respProcessing(resp);
+        if (!resp) loaderStore.redirectInMain();
         const post = postsList.value.find(el => el?.id === id);
         post.title = body.title;
         post.body = body.body;
@@ -48,7 +47,7 @@ export const usePostsStore = defineStore('posts', () => {
     async function deletePost (id) {
         loaderStore.startLoad();
         const resp = await PostsService.deletePost(id);
-        await loaderStore.respProcessing(resp);
+        if (!resp) loaderStore.redirectInMain();
         const post = postsList.value.findIndex(el => el?.id === id);
         postsList.value.splice(post, 1);
         loaderStore.stopLoad();
