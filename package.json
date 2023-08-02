@@ -35,6 +35,7 @@
         "mitt": "^3.0.0",
         "random-seed": "^0.3.0",
         "string-hash": "^1.1.3",
+        "swiper": "^9.2.0",
         "uuid": "^9.0.0",
         "vite": "^3.1.3",
         "vue": "^3.2.39",
@@ -43,13 +44,16 @@
         "vue-multiselect": "^3.0.0-alpha.2",
         "vue-router": "^4.1.5",
         "vue-toastification": "^2.0.0-rc.5",
-        "vue3-colorpicker": "^2.1.2",
-        "swiper": "^9.2.0"
+        "vue3-colorpicker": "^2.1.2"
     },
     "devDependencies": {
         "@babel/core": "^7.19.1",
         "@babel/eslint-parser": "^7.19.1",
+        "@testing-library/dom": "^8.19.1",
+        "@testing-library/jest-dom": "^5.16.5",
+        "@vitest/coverage-c8": "^0.27.1",
         "@vue/eslint-config-standard": "^8.0.1",
+        "@vue/test-utils": "^2.2.7",
         "eslint": "8.22.0",
         "eslint-plugin-standard": "^4.1.0",
         "eslint-plugin-vue": "^9.5.1",
@@ -59,10 +63,6 @@
         "vi-fetch": "^0.8.0",
         "vite-plugin-eslint": "^1.8.1",
         "vite-svg-loader": "^3.6.0",
-        "@testing-library/dom": "^8.19.1",
-        "@testing-library/jest-dom": "^5.16.5",
-        "@vitest/coverage-c8": "^0.27.1",
-        "@vue/test-utils": "^2.2.7",
         "vitest": "^0.32.4"
     }
 }
