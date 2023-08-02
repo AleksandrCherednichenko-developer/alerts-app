@@ -24,7 +24,7 @@ export default {
 const emit = defineEmits(['update:modelValue']);
 
 const props = defineProps({
-    modelValue: { type: [String, null], required: true, default: '' },
+    modelValue: { type: [String, Number, null], required: true, default: '' },
     placeholder: { type: String, default: '' },
     labelText: { type: String, default: '' },
     autocomplete: { type: String, default: '' },
