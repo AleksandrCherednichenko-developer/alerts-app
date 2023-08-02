@@ -30,9 +30,11 @@
         gap: calc-rem(10px);
         font-size: calc-rem(28px);
         font-weight: $fwBold;
+        height: 50px;
 
         &-input {
             max-width: calc-rem(100px);
+            min-height: auto;
             width: 100%;
             height: 100%;
 
@@ -47,6 +49,8 @@
         &-count {
             display: flex;
             align-items: center;
+            font-size: calc-rem(28px);
+            font-weight: $fwBold;
         }
     }
 
@@ -54,9 +58,11 @@
         font-weight: $fwBold;
         max-width: calc-rem(100px);
         width: 100%;
+        height: 50px;
 
         :deep(.multiselect__tags) {
-            padding: 10px 20px 0 8px;
+            height: 100%;
+            padding: 15px 20px 0 8px;
         }
 
         :deep(.multiselect__single){
